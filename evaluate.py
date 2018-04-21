@@ -151,8 +151,9 @@ def main():
                         full_in.append(file_path)
                         with open(file_path, 'r+b') as original:
                             with Image.open(original) as image:
-                                cover = resizeimage.resize_thumbnail(image, [224, 224])
-                                cover.save(file_path, image.format)
+                                img = img.resize((224, 224), Image.ANTIALIAS)
+                                # cover = resizeimage.resize_thumbnail(image, [224, 224])
+                                img.save(file_path, image.format)
                         if not os.path.exists(os.path.join(opts.out_path, d)):
                             os.makedirs(os.path.join(opts.out_path, d))
                         full_out.append(os.path.join(opts.out_path, d, opts.checkpoint_dir.split("/")[1] + "_" + f))
