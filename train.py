@@ -35,7 +35,7 @@ def augmentation(aug_strategy):
 
     return train_datagen, val_datagen
 
-def get_data(dataset):
+def get_data(dataset, style):
     if dataset == "caltech101":
         train_dataset = config.CAL101_TRAIN
         validation_dataset = config.CAL101_VAL
@@ -50,7 +50,7 @@ def get_data(dataset):
     return train_dataset, validation_dataset, class_number
 
 def build_vgg_models(model, dataset, epochs, aug_strategy, style):
-    train_dataset, validation_dataset, class_number = get_data(dataset)
+    train_dataset, validation_dataset, class_number = get_data(dataset, style)
     earlyStopping = EarlyStopping(monitor='val_loss', patience=10, verbose=1, mode='auto')
     tensorboard_dir = os.path.join(config.TENSOR_BOARD, model+"_"+dataset+"_"+aug_strategy+"_"+style)
     if not os.path.exists(tensorboard_dir):
@@ -91,7 +91,7 @@ if __name__ == '__main__':
                         default='vgg16',
                         help='model name')
     parser.add_argument('--style', type=int,
-                        default=0,
+                        default="NA",
                         help='choose the neural style for the image data.')
     args, unparsed = parser.parse_known_args()
     build_vgg_models(args.model.upper(), args.dataset, args.num_epochs, args.aug_strategy, args.style)
