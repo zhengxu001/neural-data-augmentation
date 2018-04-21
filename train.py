@@ -14,11 +14,11 @@ from keras import backend as K
 from keras.preprocessing.image import ImageDataGenerator
 K.set_image_dim_ordering('th')
 valid_exts = [".jpg", ".gif", ".png", ".jpeg"]
-def imread(path):
-    img = scipy.misc.imread(path).astype(np.float)
-    if len(img.shape) == 2:
-        img = np.transpose(np.array([img, img, img]), (2, 0, 1))
-    return img
+# def imread(path):
+#     img = scipy.misc.imread(path).astype(np.float)
+#     if len(img.shape) == 2:
+#         img = np.transpose(np.array([img, img, img]), (2, 0, 1))
+#     return img
 
 def augmentation(aug_strategy):
     if aug_strategy=="NA":
@@ -43,37 +43,37 @@ def augmentation(aug_strategy):
 
     return train_datagen, val_datagen
 
-def get_data(path):
-    print ("[%d] CATEGORIES ARE IN \n %s" % (len(os.listdir(path)), path))
-    categories = sorted(os.listdir(path))
-    X = []; y = []
-    for i, category in enumerate(categories):
-        for f in os.listdir(path + "/" + category):
-            if os.path.splitext(f)[1].lower() not in valid_exts:
-                continue
-            fullpath = os.path.join(path + "/" + category, f)
-            # img = scipy.misc.imresize(imread(fullpath), [224,224, 3])
-            # img = img.astype('float32')
-            X.append(imread(fullpath))
-            y.append(i)
-    X = np.stack(X, axis=0)
-    X = X.transpose(0, 3, 1, 2)
-    X = X.reshape(X.shape[0], 3, 224, 224)
-    X = X.astype('float32')
-    y = np.stack(y, axis=0)
-    y = np_utils.to_categorical(y)
-    return X, y
+# def get_data(path):
+#     print ("[%d] CATEGORIES ARE IN \n %s" % (len(os.listdir(path)), path))
+#     categories = sorted(os.listdir(path))
+#     X = []; y = []
+#     for i, category in enumerate(categories):
+#         for f in os.listdir(path + "/" + category):
+#             if os.path.splitext(f)[1].lower() not in valid_exts:
+#                 continue
+#             fullpath = os.path.join(path + "/" + category, f)
+#             # img = scipy.misc.imresize(imread(fullpath), [224,224, 3])
+#             # img = img.astype('float32')
+#             X.append(imread(fullpath))
+#             y.append(i)
+#     X = np.stack(X, axis=0)
+#     X = X.transpose(0, 3, 1, 2)
+#     X = X.reshape(X.shape[0], 3, 224, 224)
+#     X = X.astype('float32')
+#     y = np.stack(y, axis=0)
+#     y = np_utils.to_categorical(y)
+#     return X, y
 
-def load_data_according_to_style(style):
-    if style == 0:
-        X_train, y_train = get_data(config.CAL101_TRAIN)
-        X_test, y_test = get_data(config.CAL101_VAL)
-    elif style == 1:
-        X_train, y_train = get_data(config.CAL101_TRAIN_STYLE1)
-        X_test, y_test = get_data(config.CAL101_VAL_STYLE1)
-    else:
-        print("No Such Style")
-    return X_train, y_train, X_test, y_test
+# def load_data_according_to_style(style):
+#     if style == 0:
+#         X_train, y_train = get_data(config.CAL101_TRAIN)
+#         X_test, y_test = get_data(config.CAL101_VAL)
+#     elif style == 1:
+#         X_train, y_train = get_data(config.CAL101_TRAIN_STYLE1)
+#         X_test, y_test = get_data(config.CAL101_VAL_STYLE1)
+#     else:
+#         print("No Such Style")
+#     return X_train, y_train, X_test, y_test
 
 def build_vgg_models(model, aug_strategy, epochs, name, style):
     from keras.callbacks import EarlyStopping
@@ -85,8 +85,7 @@ def build_vgg_models(model, aug_strategy, epochs, name, style):
     tbCallBack = TensorBoard(log_dir= tensorboard_dir, histogram_freq=0, write_graph=True, write_images=True)
     vgg = eval(model)(weights='imagenet')
     fc2 = vgg.get_layer('fc2').output
-    num_classes = y_test.shape[1]
-    prediction = Dense(output_dim=num_classes, activation='softmax', name='logit')(fc2)
+    prediction = Dense(output_dim=101, activation='softmax', name='logit')(fc2)
     model = Model(input=vgg.input, output=prediction)
     model.compile(loss='categorical_crossentropy', optimizer=SGD(lr=0.0001), metrics=['accuracy'])
     train_datagen, val_datagen = augmentation(aug_strategy)
