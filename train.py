@@ -53,15 +53,17 @@ def get_data(path):
     print ("[%d] CATEGORIES ARE IN \n %s" % (len(os.listdir(path)), path))
     categories = sorted(os.listdir(path))
     X = []; y = []
-    for category in enumerate(categories):
+    for i, category in enumerate(categories):
         for f in os.listdir(path + "/" + category):
             if os.path.splitext(f)[1].lower() not in valid_exts:
                 continue
             fullpath = os.path.join(path + "/" + category, f)
             img = scipy.misc.imresize(imread(fullpath), [224,224, 3])
             img = img.astype('float32')
+            print(i)
+            print(category)
             X.append(img)
-            y.append(category)
+            y.append(i)
     X = np.stack(X, axis=0)
     X = X.transpose(0, 3, 1, 2)
     y = np.stack(y, axis=0)
