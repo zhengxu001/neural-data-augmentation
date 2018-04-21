@@ -38,17 +38,6 @@ def augmentation(aug_strategy):
 
     return datagen
 
-def load_data_according_to_style(style):
-    if style == 0:
-        X_train, y_train = get_data(config.CAL101_TRAIN)
-        X_test, y_test = get_data(config.CAL101_TEST)
-    elif style == 1:
-        X_train, y_train = get_data(config.CAL101_TRAIN_STYLE1)
-        X_test, y_test = get_data(config.CAL101_TEST_STYLE1)
-    else:
-        print("No Such Style")
-    return X_train, y_train, X_test, y_test
-
 def get_data(path):
     print ("[%d] CATEGORIES ARE IN \n %s" % (len(os.listdir(path)), path))
     categories = sorted(os.listdir(path))
@@ -66,6 +55,18 @@ def get_data(path):
     X = X.transpose(0, 3, 1, 2)
     y = np.stack(y, axis=0)
     y = np_utils.to_categorical(y)
+    return X, y
+
+def load_data_according_to_style(style):
+    if style == 0:
+        X_train, y_train = get_data(config.CAL101_TRAIN)
+        X_test, y_test = get_data(config.CAL101_TEST)
+    elif style == 1:
+        X_train, y_train = get_data(config.CAL101_TRAIN_STYLE1)
+        X_test, y_test = get_data(config.CAL101_TEST_STYLE1)
+    else:
+        print("No Such Style")
+    return X_train, y_train, X_test, y_test
 
 def build_vgg_models(model, X_train, y_train, X_test, y_test, aug_strategy, epochs, name):
     from keras.callbacks import EarlyStopping
