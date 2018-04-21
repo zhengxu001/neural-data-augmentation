@@ -6,12 +6,9 @@ import tensorflow as tf
 from utils import save_img, get_img, exists
 from argparse import ArgumentParser
 from collections import defaultdict
-
 BATCH_SIZE = 4
 DEVICE = '/gpu:0'
 
-
-# get img_shape
 def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
     assert len(paths_out) > 0
     is_paths = type(data_in[0]) == str
