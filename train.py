@@ -90,7 +90,7 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=str,
                         default='vgg16',
                         help='model name')
-    parser.add_argument('--style', type=int,
+    parser.add_argument('--style', type=str,
                         default="NA",
                         help='choose the neural style for the image data.')
     args, unparsed = parser.parse_known_args()
