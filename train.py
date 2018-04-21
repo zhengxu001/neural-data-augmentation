@@ -23,20 +23,25 @@ def imread(path):
 def augmentation(aug_strategy):
     if aug_strategy=="NA":
         print("No Traditional ImageAugmentation\n")
-        datagen = ImageDataGenerator(
+        train_datagen = ImageDataGenerator(
             featurewise_center=True,
-            featurewise_std_normalization=True)
+            featurewise_std_normalization=True,
+            rescale=1. / 255)
+        val_datagen = ImageDataGenerator(
+            rescale=1. / 255)
     elif aug_strategy=="filp":
         print("Use Filp as Traditional ImageAugmentation\n")
-        datagen = ImageDataGenerator(
+        train_datagen = ImageDataGenerator(
             featurewise_center=True,
             featurewise_std_normalization=True,
             horizontal_flip=True,
             vertical_flip=True)
+        val_datagen = ImageDataGenerator(
+            rescale=1. / 255)
     else:
         print("Please choose the right ImageAugmentation Strategy\n")
 
-    return datagen
+    return train_datagen, val_datagen
 
 def get_data(path):
     print ("[%d] CATEGORIES ARE IN \n %s" % (len(os.listdir(path)), path))
@@ -47,12 +52,14 @@ def get_data(path):
             if os.path.splitext(f)[1].lower() not in valid_exts:
                 continue
             fullpath = os.path.join(path + "/" + category, f)
-            img = scipy.misc.imresize(imread(fullpath), [224,224, 3])
-            img = img.astype('float32')
-            X.append(img)
+            # img = scipy.misc.imresize(imread(fullpath), [224,224, 3])
+            # img = img.astype('float32')
+            X.append(imread(fullpath))
             y.append(i)
     X = np.stack(X, axis=0)
     X = X.transpose(0, 3, 1, 2)
+    X = X.reshape(X.shape[0], 3, 224, 224)
+    X = X.astype('float32')
     y = np.stack(y, axis=0)
     y = np_utils.to_categorical(y)
     return X, y
@@ -68,7 +75,7 @@ def load_data_according_to_style(style):
         print("No Such Style")
     return X_train, y_train, X_test, y_test
 
-def build_vgg_models(model, X_train, y_train, X_test, y_test, aug_strategy, epochs, name):
+def build_vgg_models(model, aug_strategy, epochs, name, style):
     from keras.callbacks import EarlyStopping
     from keras.callbacks import TensorBoard
     earlyStopping = EarlyStopping(monitor='val_loss', patience=10, verbose=1, mode='auto')
@@ -82,22 +89,32 @@ def build_vgg_models(model, X_train, y_train, X_test, y_test, aug_strategy, epoc
     prediction = Dense(output_dim=num_classes, activation='softmax', name='logit')(fc2)
     model = Model(input=vgg.input, output=prediction)
     model.compile(loss='categorical_crossentropy', optimizer=SGD(lr=0.0001), metrics=['accuracy'])
-    datagen = augmentation(aug_strategy)
-    datagen.fit(X_train)
-    model.fit_generator(datagen.flow(X_train, y_train, batch_size=32), validation_data=(X_test, y_test), 
-          epochs=epochs, batch_size=56, shuffle=True, callbacks=[earlyStopping, tbCallBack])
+    train_datagen, val_datagen = augmentation(aug_strategy)
+    train_generator = train_datagen.flow_from_directory(
+        config.CAL101_TRAIN,
+        target_size=(224,224),
+        batch_size=64,
+        class_mode='categorical')
+    val_generator = train_datagen.flow_from_directory(
+        config.CAL101_VAL,
+        target_size=(224,224),
+        batch_size=64,
+        shuffle=False, 
+        class_mode='categorical')
+    model.fit_generator(train_generator, validation_data=val_generator,
+          epochs=epochs, batch_size=56, callbacks=[earlyStopping, tbCallBack])
     scores = model.evaluate(X_test, y_test, verbose=0)
     print("Accuracy: %.2f%%" % (scores[1]*100))
 
-def vgg16(X_train, y_train, X_test, y_test, aug_strategy, epochs, name):
-    build_vgg_models("VGG16", X_train, y_train, X_test, y_test, aug_strategy, epochs, name)
+def vgg16(aug_strategy, epochs, name, style):
+    build_vgg_models("VGG16", aug_strategy, epochs, name, style)
 
-def vgg19(X_train, y_train, X_test, y_test, aug_strategy, epochs, name):
-    build_vgg_models("VGG19", X_train, y_train, X_test, y_test, aug_strategy, epochs, name)
+def vgg19(aug_strategy, epochs, name, style):
+    build_vgg_models("VGG19", aug_strategy, epochs, name, style)
 
 def main(name, epochs, aug_strategy, model, style):
-    X_train, y_train, X_test, y_test = load_data_according_to_style(style)
-    eval(model)(X_train, y_train, X_test, y_test, aug_strategy, epochs, name)
+    # X_train, y_train, X_test, y_test = load_data_according_to_style(style)
+    eval(model)(aug_strategy, epochs, name, style)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
