@@ -1,6 +1,8 @@
 from __future__ import print_function
 import sys
 import scipy
+from PIL import Image
+from resizeimage import resizeimage
 sys.path.insert(0, 'src')
 import transform, numpy as np, os
 import tensorflow as tf
@@ -147,8 +149,10 @@ def main():
                     for f in filenames:
                         file_path = os.path.join(opts.in_path, d, f)
                         full_in.append(file_path)
-                        resize_image = scipy.misc.imresize(imread(file_path), [224,224, 3])
-                        save_img(file_path, resize_image)
+                        with open(file_path, 'r+b') as original:
+                            with Image.open(original) as image:
+                                cover = resizeimage.resize_cover(image, [224, 224])
+                                cover.save(file_path, image.format)
                         if not os.path.exists(os.path.join(opts.out_path, d)):
                             os.makedirs(os.path.join(opts.out_path, d))
                         full_out.append(os.path.join(opts.out_path, d, opts.checkpoint_dir.split("/")[1] + "_" + f))
