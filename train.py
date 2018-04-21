@@ -60,8 +60,6 @@ def get_data(path):
             fullpath = os.path.join(path + "/" + category, f)
             img = scipy.misc.imresize(imread(fullpath), [224,224, 3])
             img = img.astype('float32')
-            print(i)
-            print(category)
             X.append(img)
             y.append(i)
     X = np.stack(X, axis=0)
