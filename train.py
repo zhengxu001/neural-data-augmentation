@@ -60,10 +60,10 @@ def get_data(path):
 def load_data_according_to_style(style):
     if style == 0:
         X_train, y_train = get_data(config.CAL101_TRAIN)
-        X_test, y_test = get_data(config.CAL101_TEST)
+        X_test, y_test = get_data(config.CAL101_VAL)
     elif style == 1:
         X_train, y_train = get_data(config.CAL101_TRAIN_STYLE1)
-        X_test, y_test = get_data(config.CAL101_TEST_STYLE1)
+        X_test, y_test = get_data(config.CAL101_VAL_STYLE1)
     else:
         print("No Such Style")
     return X_train, y_train, X_test, y_test
