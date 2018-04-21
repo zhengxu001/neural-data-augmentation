@@ -5,10 +5,12 @@ This project is to use Neural Transfer as a Image Data Augmentation strategy. Th
 ### Implementation Details
 The implementation is based on TensorFlow and Keras. The base code for style transfer is from https://github.com/lengstrom/fast-style-transfer. I just deleted some useless files and modified the reading files code to support the clatech folder strucure.
 
-###Setup
-- git clone git@gitlab.scss.tcd.ie:xzheng/dissertation.git
-- cd dissertation
-- ./setup.sh
+### Setup
+The setup process will download all the necessary data used in this project, which will take around half an hour with a good network condition
+
+    git clone git@gitlab.scss.tcd.ie:xzheng/dissertation.git
+    cd dissertation
+    ./setup.sh
 
 ### Training Style Transfer Networks
 Use `style.py` to train a new style transfer network. Run `python style.py` to view all the possible parameters. Remeber to create the checkpoint folder before runing below command. Example usage:
