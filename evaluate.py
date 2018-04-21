@@ -1,5 +1,6 @@
 from __future__ import print_function
 import sys
+import scipy
 sys.path.insert(0, 'src')
 import transform, numpy as np, os
 import tensorflow as tf
