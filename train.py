@@ -52,7 +52,7 @@ def get_data(dataset):
 def build_vgg_models(model, dataset, epochs, aug_strategy, style):
     train_dataset, validation_dataset, class_number = get_data(dataset)
     earlyStopping = EarlyStopping(monitor='val_loss', patience=10, verbose=1, mode='auto')
-    tensorboard_dir = os.path.join(config.TENSOR_BOARD, model+"_"+dataset+"_"+aug_strategy+"_"+style+"_"+epochs)
+    tensorboard_dir = os.path.join(config.TENSOR_BOARD, model+"_"+dataset+"_"+aug_strategy+"_"+style)
     if not os.path.exists(tensorboard_dir):
         os.makedirs(tensorboard_dir)
     tbCallBack = TensorBoard(log_dir= tensorboard_dir, histogram_freq=0, write_graph=True, write_images=True)
