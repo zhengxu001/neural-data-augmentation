@@ -6,7 +6,7 @@ import numpy as np
 import argparse
 from keras.layers import Dense
 from keras.applications.vgg16 import VGG16
-from keras.applications.vgg16 import VGG19
+from keras.applications.vgg19 import VGG19
 from keras.models import Model
 from keras.optimizers import SGD
 from keras.utils import np_utils
