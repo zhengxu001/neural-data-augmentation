@@ -100,8 +100,9 @@ def build_vgg_models(model, aug_strategy, epochs, name, style):
         batch_size=64,
         shuffle=False, 
         class_mode='categorical')
+    steps_per_epoch   = 9146 / 64
     model.fit_generator(train_generator, validation_data=val_generator,
-          epochs=epochs, batch_size=56, callbacks=[earlyStopping, tbCallBack])
+          epochs=epochs, steps_per_epoch = steps_per_epoch, callbacks=[earlyStopping, tbCallBack])
     scores = model.evaluate(X_test, y_test, verbose=0)
     print("Accuracy: %.2f%%" % (scores[1]*100))
 
