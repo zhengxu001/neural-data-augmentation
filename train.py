@@ -85,7 +85,7 @@ def build_vgg_models(model, aug_strategy, epochs, name, style):
     tbCallBack = TensorBoard(log_dir= tensorboard_dir, histogram_freq=0, write_graph=True, write_images=True)
     vgg = eval(model)(weights='imagenet')
     fc2 = vgg.get_layer('fc2').output
-    prediction = Dense(output_dim=101, activation='softmax', name='logit')(fc2)
+    prediction = Dense(output_dim=102, activation='softmax', name='logit')(fc2)
     model = Model(input=vgg.input, output=prediction)
     model.compile(loss='categorical_crossentropy', optimizer=SGD(lr=0.0001), metrics=['accuracy'])
     train_datagen, val_datagen = augmentation(aug_strategy)
