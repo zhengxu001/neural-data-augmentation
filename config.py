@@ -4,6 +4,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 TENSOR_BOARD = os.path.join(ROOT_DIR, "tensorboard/")
 
+DATASET = os.path.join(ROOT_DIR, "dataset")
 CAL101 = os.path.join(ROOT_DIR, "dataset/caltech101")
 CAL101_TRAIN = os.path.join(CAL101, "train")
 CAL101_VAL = os.path.join(CAL101, "val")
