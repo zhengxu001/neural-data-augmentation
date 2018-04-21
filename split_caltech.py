@@ -4,7 +4,7 @@ import itertools
 import numpy as np
 import config
 import argparse
-def main(dataset_name):
+def split_dataset(dataset_name):
     data_path = os.path.join(config.DATASET, dataset_name, "train")
     test_path = os.path.join(config.DATASET, dataset_name, "val")
     categories = os.listdir(data_path)
@@ -20,10 +20,5 @@ def main(dataset_name):
                 os.mkdir(dest_dir)
             shutil.move(origin_path, dest_path)
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset_name', type=str,
-                        default='caltech101',
-                        help='Name of this training run.')
-    args, unparsed = parser.parse_known_args()
-    main(args.dataset_name)
+split_dataset("caltech101")
+split_dataset("caltech256")
