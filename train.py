@@ -97,7 +97,7 @@ def vgg19(X_train, y_train, X_test, y_test, aug_strategy, epochs, name):
 
 def main(name, epochs, aug_strategy, model, style):
     X_train, y_train, X_test, y_test = load_data_according_to_style(style)
-    eval(model)(model, X_train, y_train, X_test, y_test, aug_strategy, epochs, name)
+    eval(model)(X_train, y_train, X_test, y_test, aug_strategy, epochs, name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
