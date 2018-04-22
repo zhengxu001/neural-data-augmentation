@@ -65,12 +65,12 @@ def build_vgg_models(model, dataset, epochs, aug_strategy, style):
     train_generator = train_datagen.flow_from_directory(
         train_dataset,
         target_size=(224,224),
-        batch_size=64,
+        batch_size=32,
         class_mode='categorical')
     val_generator = train_datagen.flow_from_directory(
         validation_dataset,
         target_size=(224,224),
-        batch_size=64,
+        batch_size=32,
         shuffle=False, 
         class_mode='categorical')
     model.fit_generator(train_generator, validation_data=val_generator,
@@ -82,7 +82,7 @@ if __name__ == '__main__':
                         default='caltech101',
                         help='caltech101 or caltech256')
     parser.add_argument('--num_epochs', type=int,
-                        default=25,
+                        default=40,
                         help='number of epochs.')
     parser.add_argument('--aug_strategy', type=str,
                         default='NA',
