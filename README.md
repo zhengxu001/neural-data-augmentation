@@ -39,3 +39,8 @@ Use `train.py` to evaluate effect of augmentated images. Run `python train.py` w
     python train.py --dataset caltech256 \
       --model vgg19 \
       --style wave
+
+### ToDo
+- [ ] Traing Model according to sheet: https://docs.google.com/spreadsheets/d/1VBMZK1qmADiwD1fo33wxBVg79YbS2TsP_jjoOHAPLBE/edit?usp=sharing
+- [ ] Wring Stuffs
+
