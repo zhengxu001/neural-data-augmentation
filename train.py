@@ -23,7 +23,7 @@ def augmentation(aug_strategy):
             rescale=1. / 255)
         val_datagen = ImageDataGenerator(
             rescale=1. / 255)
-    elif aug_strategy=="filp":
+    elif aug_strategy=="flip":
         print("Use Filp as Traditional ImageAugmentation\n")
         train_datagen = ImageDataGenerator(
             horizontal_flip=True,
