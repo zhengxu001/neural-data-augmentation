@@ -37,7 +37,7 @@ def augmentation(aug_strategy):
 
 def get_data(dataset, style):
     if dataset == "caltech101":
-        if style == "wave"
+        if style == "wave":
             train_dataset = config.CAL101_TRAIN_WAVE
             validation_dataset = config.CAL101_VAL_WAVE
             class_number = 102
