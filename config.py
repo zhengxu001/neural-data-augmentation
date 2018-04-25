@@ -17,4 +17,7 @@ CAL256 = os.path.join(ROOT_DIR, "dataset/caltech256")
 CAL256_TRAIN = os.path.join(CAL256, "train")
 CAL256_VAL = os.path.join(CAL256, "val")
 
+CAL256_TRAIN_WAVE = os.path.join(DATASET, "wave256/train")
+CAL256_VAL_WAVE = os.path.join(DATASET, "wave256/val")
+
 VALID_EXTS = [".jpg", ".gif", ".png", ".jpeg"]
