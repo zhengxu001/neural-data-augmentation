@@ -12,6 +12,9 @@ CAL101_VAL = os.path.join(CAL101, "val")
 CAL101_TRAIN_WAVE = os.path.join(DATASET, "wave/train")
 CAL101_VAL_WAVE = os.path.join(DATASET, "wave/val")
 
+CAL101_TRAIN_SCREAM = os.path.join(DATASET, "scream/train")
+CAL101_VAL_SCREAM = os.path.join(DATASET, "scream/val")
+
 
 CAL256 = os.path.join(ROOT_DIR, "dataset/caltech256")
 CAL256_TRAIN = os.path.join(CAL256, "train")
@@ -19,5 +22,8 @@ CAL256_VAL = os.path.join(CAL256, "val")
 
 CAL256_TRAIN_WAVE = os.path.join(DATASET, "wave256/train")
 CAL256_VAL_WAVE = os.path.join(DATASET, "wave256/val")
+
+CAL256_TRAIN_SCREAM = os.path.join(DATASET, "scream256/train")
+CAL256_VAL_SCREAM = os.path.join(DATASET, "scream256/val")
 
 VALID_EXTS = [".jpg", ".gif", ".png", ".jpeg"]

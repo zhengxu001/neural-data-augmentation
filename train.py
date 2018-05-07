@@ -41,6 +41,10 @@ def get_data(dataset, style):
             train_dataset = config.CAL101_TRAIN_WAVE
             validation_dataset = config.CAL101_VAL_WAVE
             class_number = 102
+        elif style == "scream":
+            train_dataset = config.CAL101_TRAIN_SCREAM
+            validation_dataset = config.CAL101_VAL_SCREAM
+            class_number = 102
         else:
             train_dataset = config.CAL101_TRAIN
             validation_dataset = config.CAL101_VAL
@@ -50,10 +54,15 @@ def get_data(dataset, style):
             train_dataset = config.CAL256_TRAIN_WAVE
             validation_dataset = config.CAL256_VAL_WAVE
             class_number = 257
+        elif style == "scream":
+            train_dataset = config.CAL256_TRAIN_SCREAM
+            validation_dataset = config.CAL256_VAL_SCREAM
+            class_number = 257
         else:
             train_dataset = config.CAL256_TRAIN
             validation_dataset = config.CAL256_VAL
             class_number = 257
+
     else:
         print("No Such Dataset Supported! Please specify the correct Dataset Name")
 
