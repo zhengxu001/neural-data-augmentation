@@ -26,8 +26,20 @@ def augmentation(aug_strategy):
     elif aug_strategy=="flip":
         print("Use Filp as Traditional ImageAugmentation\n")
         train_datagen = ImageDataGenerator(
+            rescale=1./255,
             horizontal_flip=True,
             vertical_flip=True)
+        val_datagen = ImageDataGenerator(
+            rescale=1. / 255)
+    elif aug_strategy=="flip_rotation":
+        print("Use Filp and Rotation as Traditional ImageAugmentation\n")
+        train_datagen = ImageDataGenerator(
+            rescale=1./255,
+            featurewise_center=True,
+            featurewise_std_normalization=True,
+            horizontal_flip=True,
+            vertical_flip=True,
+            rotation_range=90.)
         val_datagen = ImageDataGenerator(
             rescale=1. / 255)
     else:
