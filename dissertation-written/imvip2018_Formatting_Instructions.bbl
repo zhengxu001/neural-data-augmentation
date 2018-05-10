@@ -1,0 +1,19 @@
+\begin{thebibliography}{}
+
+\bibitem[Goodfellow et~al., 2016]{goodfellow}
+Goodfellow, I., Bengio, Y., and Courville, A. (2016).
+\newblock {\em Deep Learning}.
+\newblock MIT Press, ISBN: 9780262337434.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem[Hartley and Zisserman, 2004]{hartley}
+Hartley, R.~I. and Zisserman, A. (2004).
+\newblock {\em Multiple View Geometry in Computer Vision}.
+\newblock Cambridge University Press, ISBN: 0521540518, second edition.
+
+\bibitem[Jain, 1989]{jain}
+Jain, A.~K. (1989).
+\newblock {\em Fundamentals of Digital Image Processing}.
+\newblock Englewood Cliffs NJ: Prentice-Hall.
+
+\end{thebibliography}
