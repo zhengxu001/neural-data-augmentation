@@ -50,35 +50,43 @@ def augmentation(aug_strategy):
 def get_data(dataset, style):
     if dataset == "caltech101":
         if style == "wave":
+            print("Use Dataset caltech101 and wave style\n")
             train_dataset = config.CAL101_TRAIN_WAVE
             validation_dataset = config.CAL101_VAL_WAVE
             class_number = 102
         elif style == "scream":
+            print("Use Dataset caltech101 and scream style\n")
             train_dataset = config.CAL101_TRAIN_SCREAM
             validation_dataset = config.CAL101_VAL_SCREAM
             class_number = 102
         elif style == "scream_wave":
+            print("Use Dataset caltech101 and scream_wave style\n")
             train_dataset = config.CAL101_TRAIN_SCREAM_WAVE
             validation_dataset = config.CAL101_VAL_SCREAM_WAVE
             class_number = 102
         else:
+            print("Use Dataset caltech101 and no style\n")
             train_dataset = config.CAL101_TRAIN
             validation_dataset = config.CAL101_VAL
             class_number = 102
     elif dataset == "caltech256":
         if style == "wave":
+            print("Use Dataset caltech256 and wave style\n")
             train_dataset = config.CAL256_TRAIN_WAVE
             validation_dataset = config.CAL256_VAL_WAVE
             class_number = 257
         elif style == "scream":
+            print("Use Dataset caltech256 and scream style\n")
             train_dataset = config.CAL256_TRAIN_SCREAM
             validation_dataset = config.CAL256_VAL_SCREAM
             class_number = 257
         elif style == "scream_wave256":
+            print("Use Dataset caltech256 and scream_wave256 style\n")
             train_dataset = config.CAL256_TRAIN_SCREAM_WAVE
             validation_dataset = config.CAL256_VAL_SCREAM_WAVE
             class_number = 257
         else:
+            print("Use Dataset caltech101 and no style\n")
             train_dataset = config.CAL256_TRAIN
             validation_dataset = config.CAL256_VAL
             class_number = 257
@@ -89,6 +97,8 @@ def get_data(dataset, style):
     return train_dataset, validation_dataset, class_number
 
 def build_vgg_models(model, dataset, epochs, aug_strategy, style):
+    print("User Model", model)
+    print("Expected Epochs is", epochs)
     train_dataset, validation_dataset, class_number = get_data(dataset, style)
     earlyStopping = EarlyStopping(monitor='val_loss', patience=10, verbose=1, mode='auto')
     tensorboard_dir = os.path.join(config.TENSOR_BOARD, model+"_"+dataset+"_"+aug_strategy+"_"+style)
