@@ -39,7 +39,7 @@ def augmentation(aug_strategy):
             featurewise_std_normalization=True,
             horizontal_flip=True,
             vertical_flip=True,
-            rotation_range=90.)
+            rotation_range=60.)
         val_datagen = ImageDataGenerator(
             rescale=1. / 255)
     else:

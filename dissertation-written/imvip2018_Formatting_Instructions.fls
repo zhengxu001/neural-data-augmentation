@@ -10,6 +10,10 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/size11.clo
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/size11.clo
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/outlines/outlines.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/outlines/outlines.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fourier.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fourier.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
@@ -130,8 +134,12 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/futr8t.tfm
@@ -154,8 +162,6 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/futmi.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
-INPUT imvip2018_Formatting_Instructions.bbl
-INPUT imvip2018_Formatting_Instructions.bbl
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/public/fourier/futmii.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/fourier-mlit.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/fourier-ml.tfm
@@ -169,6 +175,11 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/public/fourier/futr8t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/futr8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT imvip2018_Formatting_Instructions.bbl
+INPUT imvip2018_Formatting_Instructions.bbl
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT imvip2018_Formatting_Instructions.aux
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb

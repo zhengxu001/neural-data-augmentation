@@ -15,7 +15,7 @@
 \setlength{\oddsidemargin}{-.5cm}
 
 
-
+\usepackage{outlines}
 \usepackage{fourier}
 \usepackage{color}
  \usepackage{graphicx}
@@ -50,32 +50,61 @@ This paper presents a novel approch to use the image style transfer by CNN as a 
 \textbf{Keywords:} Neural network, Style Transfer, Data Augmentation, Image Calssification.
 
 \section{Introduction}
-We propose exploring the problem of data augmentation for image and video classiﬁcation, and evaluating different techniques. It is common knowledge that the more data an ML algorithm has access to, the more effective it can be. Even when the data is of lower quality, algorithms can actually perform better, as long as useful data can be extracted by the model from the original data set. For example, text-to-speech and text-based models have improved signiﬁcantly due to the release of a trillion-word corpus by Google [8]. This result is despite the fact that the data is collected from unﬁltered Web pages and contains many errors. With such large and unstructured data sets, however, the task becomes one of ﬁnding structure within a sea of unstructured data. However, alternative approaches exist. Rather than starting with an extremely large corpus of unstructured and unlabeled data, can we instead take a small, curated corpus of structured data and augment in a way that increases the performance of models trained on it? This approach has proven effective in multiple problems.
-
-Data augmentation guided by expert knowledge [14], more generic image augmentation [18], and has shown effective in image classiﬁcation [16].
+Deep Convolutional Neural Networks (CNN) have grown in popularity for performing image processing tasks like image classification, object detection and segementation. In the state-of-art network architechters, many different kinds of data augmentation strategies have been used and found effective to improve the performance.
+At the mean while, The Neural Algorithm of Artistic Style has been found can apply artistic style to a image without chaning the high level content of the original images \cite{Image Style Transfer Using Convolutional Neural Networks}.
 
 The motivation for this problem is both broad and speciﬁc. Specialized image and video classiﬁcation tasks often have insufﬁcient data. This is particularly true in the medical industry, where access to data is heavily protected due to privacy concerns. Important tasks such as classifying cancer types [14] are hindered by this lack of data. Techniques have been developed which combine expert domain knowledge with pre-trained models. Similarly, small players in the AI industry often lack access to signiﬁcant amounts of data. At the end of the day, we’ve realized a large limiting factor for most projects is access to reliable data, and as such, we explore the effectiveness of distinct data augmentation techniques in image classiﬁcation tasks.
 
-The datasets we examine are the tiny-imagenet-200 data and MNIST [2] [3] . Tiny-imagenet-200 consists of 100k training, 10k validation, and 10k test images of dimensions 64x64x3. There are a total of 500 images per class with 200 distinct classes. MNIST consists of 60k handwritten digits in the training set and 10k in the test set in grayscale with 10 classes with image dimensions of 28x28x1. To evaluate the effectiveness of augmentation techniques, we restrict our data to two classes and build constitutional neural net classiﬁers to correctly guess the class.
+The datasets we examine are the caltech101 dataset and caltech256. Caltech101 consists of 9000 images and 102 categories, while caltech256 contains 257 categories and ***** images. To evaluate the effectiveness of augmentation techniques, we split both data set as 70\% of images are used for training and 30\% of images are used for validation.
 
-In particular, we will train our own small net to perform a rudimentary classiﬁcation. We will then proceed to use typical data augmentation techniques, and retrain our models. Next, we will make use of CycleGAN [19] to augment our data by transferring styles from images in the dataset to a ﬁxed predetermined image such as Night/Day theme or Winter/Summer. Finally, we explore and propose a different kind of augmentation where we combine neural nets that transfer style and classify so instead of standard augmentation tricks, the neural net learns augmentations that best re-
+We will apply the pre-trained vgg16 and vgg19 to perform a rudimentary classification. Troditional data augmentation techniques will be firstly used for, and retrain our models. Next, we will make use of CycleGAN [19] to augment our data by transferring styles from images in the dataset to a ﬁxed predetermined image such as Night/Day theme or Winter/Summer. Finally, we explore and propose a different kind of augmentation where we combine neural nets that transfer style and classify so instead of standard augmentation tricks, the neural net learns augmentations that best re-
 
 1 duce classiﬁcation loss. For all the above, we will measure classiﬁcation performance on the validation dataset as the metric to compare these augmentation strategies.
 
 \section{Related Work}
 This section provides a brief review of past work that has augmented data to improve image classiﬁer performance and the state of the art techniques of neural style transfer.
 \subsection{Troditional Data Augmentation Tecniques}
-Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
+\subsubsection{AlexNet}
+AlexNet from \cite{krizhevsky2012imagenet} is the winner of ILSVRC 2012 and the first model to make CNN popular in Computer Vision field. In this work, a 8 layers CNN model are introduced. \textbf{Data augmentation techniques such as image translations, horizontal reflections, and patch extractions were used to avoid overfitting.} ReLU and dropout are also used in this paper.
+\subsubsection{VGGNet}
+VGGNet is a simple but deep model created by \cite{simonyan2014very}. This model strictly used 3x3 filters with stride and pad of 1, along with 2x2 maxpooling layers with stride 2.
+\begin{outline}
+\1 3 3*3 conv layers back to back have an effective receptive field of 7x7.
+\1 Used scale jittering as one data augmentation technique during training.
+\1 But it took a very long time to train: Trained on 4 Nvidia Titan Black GPUs for two to three weeks.
+\end{outline}
+\subsubsection{ResNet}
+ResNet by \cite{he2016deep} is a 152 layer network architecture that won ILSVRC 2015.
+\begin{outline}
+\1 The idea behind a residual block is that you have your input x, after conv layer, relu layer and normalization layer series, you will get fearure maps: F(x). That result is then added to the original input x: H(x) = F(x) + x, and then continue the training.
+\1 \textbf{Naive increase of layers in plain nets result in higher training and test error.}
+\1 The group tried a 1202-layer network, but got a lower test accuracy, presumably due to overfitting.
+\end{outline}
+\subsubsection{ZFNet}
+\begin{outline}
+\1 Reconstruction in ZFNet: \cite{zeiler2014visualizing} introduced another reconstruction method with Unpooling, Rectification and Filtering are applied for visualization of an activation in some layers, But it can only reconstrut one activation one time (To examine a given convnet activation, all other activations in the layer are set to zero and pass the feature maps as input to the attached deconvnet layer).
+\end{outline}
 
 \subsubsection{Neural Style Transfer}
-Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
+The algorithm of \cite{gatys2016image} is the first method that use Gram matrices to to represent the style and use some layer to represent the content, and then reconstruct the stylized image by minimizing the loss by gradient descent with backpropagation. The basic idea of image style transfer is to jointly minimise the distance of the feature representations of a white noise image from the image content representation in one layer and the painting style representation defined on a number of layers of the Convolutional Neural Network . The author found that replacing the maximum pooling operation by average pooling yields slightly more appealing results. Adjust the trade-off between content and style to create different images. The different initialisations do not seem to have a strong effect on the outcome of the synthesis procedure In this work, the author consider style transfer to be successful if the generated image ‘looks like’ the style image but shows the objects and scenery of the content image. VGG network is applied in this work.
 
-%%
+Although the the work by \cite{gatys2016image} can produce impressive stylized images, there are still soem efﬁciency issues "since each step of the optimization problem requires a forward and backward pass through the pretrained network" \cite{johnson2016perceptual}. We are going to apply the Style Transfer as a data agumentation strategy, so the performance is of great importance. Based on the previous work, many Fast Neural Style Transfer methods has been proposed.
+\subsection{Perceptual Losses and FeedForward Network}
+Based on the algorithm proposed by \cite{gatys2016image}, \cite{johnson2016perceptual} introduced a much faster approach.
+\begin{outline}
+\1 Their system consists of two components: an image transformation network and a loss network
+  \2 The image transformation network is a deep residual convolutional neural network parameterized by weights W; it can transform input images to output images.
+  \2 Each loss function computes a scalar value to measure the diﬀerence between the output image and a target image, including Feature Reconstruction Loss and Style Reconstruction Loss.
+\end{outline}
+\subsection{N-Styles FeedForward Network}
+Although the work by \cite{johnson2016perceptual} are much faster than descriptive methods, their limitations are also obvious: each generative network is trained for a single style, which means that we need to train multiple networks for different styles, so it is time consuming and not flexible. Based on the observation, \cite{dumoulin2016learned} proposed an algorithm to train a conditional style transfer network for multiple styles. Their work "stems from the intuition that many styles probably share some degree of computation, and that this sharing is thrown away by training N networks from scratch when building an Nstyles style transfer system."
+By using their method and tuning parameters of an conditional instance normalization, we "can stylize a single image into N painting styles with a single feed forward pass of the network with a batch size of N." 
+
 \section{Method}
 Method. How to keep high level content. how to apply styles. the formulars.
 \subsection{Datasets and Features} 
 \subsection{Baseline Network}
-We propose two different approaches to data augmentation. The ﬁrst approach is generate augmented data before training the classiﬁer. For instance, we will apply GANs and basic transformations to create a larger dataset. All images are fed into the net at training time and at test time, only the original images are used to validate. The second approach attempts to learn augmentation through a prepended neural net. At training time, this neural net takes in two random images from the training set and outputs a single ”image” so that this image matches either in style or in context with a given image from the training set. This output, which represents an augmented image produced by the network, is fed into the second classifying network along with the original training data. The training loss is then backpropagated to train the augmenting layers of the network as well as the classiﬁcation layers of the network. In test time, images from the validation or test set is ran through only the classiﬁcation network. The motivation is to train a model to identify the best augmentations for a given dataset. The remainder of this section will go into detail of the data augmentation tricks we tried.
+We propose two different approaches to data augmentation. The ﬁrst approach is generate augmented data before training the classiﬁer. For instance, we will apply GANs and basic transformations to create a larger dataset. All images are fed into the net at training time and at test time, only the original images are used to validate. 
 
 3.1. Traditional Transformations
 Traditional transformations consist of using a combination of afﬁne transformations to manipulate the training data [9]. For each input image, we generate a ”duplicate” image that is shifted, zoomed in/out, rotated, ﬂipped, distorted, or shaded with a hue. Both image and duplicate are fed into the neural net. For a dataset of size N, we generate a dataset of 2N size.
@@ -85,6 +114,9 @@ For each input image, we select a style image from a subset of 6 different style
 
 Figure II: Neural Style Transfer via CNN
 
+More details about the architecture of the layers will be described in the Experiments section. We implement a small 5-layer CNN to perform augmentation. The classiﬁer is a small 3-layer net with batch normalization and pooling followed by 2 fully connected layers with dropout. This is much similar to VGG16 in structure but smaller in interest of faster training for evaluation. We aren’t aiming for the best classiﬁer. We are exploring how augmentation tricks improve classiﬁcation accuracy, reduce overﬁtting, and help the networks converge faster.
+
+3.3 Neural Style Transfer with Traditional Transformations
 More details about the architecture of the layers will be described in the Experiments section. We implement a small 5-layer CNN to perform augmentation. The classiﬁer is a small 3-layer net with batch normalization and pooling followed by 2 fully connected layers with dropout. This is much similar to VGG16 in structure but smaller in interest of faster training for evaluation. We aren’t aiming for the best classiﬁer. We are exploring how augmentation tricks improve classiﬁcation accuracy, reduce overﬁtting, and help the networks converge faster.
 
 

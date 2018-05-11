@@ -1,3 +1,9 @@
 \begin{thebibliography}{}
 
+\bibitem[Gatys et~al., 2016]{gatys2016image}
+Gatys, L.~A., Ecker, A.~S., and Bethge, M. (2016).
+\newblock Image style transfer using convolutional neural networks.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2016 IEEE
+  Conference on}, pages 2414--2423. IEEE.
+
 \end{thebibliography}
