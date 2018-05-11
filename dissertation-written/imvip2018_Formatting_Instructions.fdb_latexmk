@@ -1,16 +1,14 @@
 # Fdb version 3
-["bibtex imvip2018_Formatting_Instructions"] 1525963267 "imvip2018_Formatting_Instructions.aux" "imvip2018_Formatting_Instructions.bbl" "imvip2018_Formatting_Instructions" 1525963684
+["bibtex imvip2018_Formatting_Instructions"] 1525994946 "imvip2018_Formatting_Instructions.aux" "imvip2018_Formatting_Instructions.bbl" "imvip2018_Formatting_Instructions" 1525994947
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/apalike.bst" 1480098433 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "imvip2018.bib" 1486984212 663 fd765425fea0d8120832b4b0d8b2f4eb ""
-  "imvip2018_Formatting_Instructions.aux" 1525963684 1822 98fa78ce6c312d50729c256f33c3020b ""
+  "imvip2018_Formatting_Instructions.aux" 1525994947 942 94162d539cdbdcece1224956d871f9f7 ""
   (generated)
   "imvip2018_Formatting_Instructions.bbl"
   "imvip2018_Formatting_Instructions.blg"
-["pdflatex"] 1525963684 "imvip2018_Formatting_Instructions.tex" "imvip2018_Formatting_Instructions.pdf" "imvip2018_Formatting_Instructions" 1525963684
+["pdflatex"] 1525994946 "imvip2018_Formatting_Instructions.tex" "imvip2018_Formatting_Instructions.pdf" "imvip2018_Formatting_Instructions" 1525994947
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
-  "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1480098688 1292 bd42be2f344128bff6d35d98474adfe3 ""
-  "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm" 1480098688 1384 4632f5e54900a7dadbb83f555bc61e56 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1480098689 4524 6bce29db5bc272ba5f332261583fee9c ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm" 1480098689 6880 f19b8995b61c334d78fc734065f6b4d4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm" 1480098689 4408 25b74d011a4c66b7f212c0cc3c90061b ""
@@ -36,11 +34,9 @@
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb" 1480098730 37756 112837e95d30cb64c320437ea63bd4d6 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb" 1480098739 6232 c3fc7954848548c26c82678efc1400a6 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb" 1480098739 22192 22800790ceca09b5f3b0be051c1e852e ""
-  "/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1480098746 45758 19968a0990191524e34e1994d4a31cb6 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1480098746 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1480098746 46026 6dab18b61c907687b520c72847215a68 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1480098746 45458 a3faba884469519614ca56ba5f6b1de1 ""
-  "/usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf" 1480098757 2184 8475af1b9cfa983db5f46f5ed4b8f9f7 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf" 1480098758 2340 df9c920cc5688ebbf16a93f45ce7bdd3 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf" 1480098758 2348 91706c542228501c410c266421fbe30c ""
   "/usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf" 1480098758 2328 6cd7df782b09b29cfc4d93e55b6b9a59 ""
@@ -88,7 +84,6 @@
   "/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty" 1480098836 7075 2fe3d848bba95f139de11ded085e74aa ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1480098836 22417 1d9df1eb66848aa31b18a593099cf45c ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/preprint/authblk.sty" 1480098837 7016 985a983ce041cc8959cd31133cba0244 ""
-  "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd" 1480098837 798 d5895e9edc628f2be019beb2c0ec66df ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd" 1480098837 774 61d7da1e9f9e74989b196d147e623736 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/times.sty" 1480098837 857 6c716f26c5eadfb81029fcd6ce2d45e6 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty" 1480098841 4544 8b8f59969458e1c25e0559e8e0ced1a4 ""
@@ -98,12 +93,10 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1512859311 4129592 03edbb9abc72f688f4bc04276b83028c ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "belfast_campus.jpg" 1524845345 45772 095117a9c0795202bdf5144fb401dff1 ""
-  "imvip2018_Formatting_Instructions.aux" 1525963684 1822 98fa78ce6c312d50729c256f33c3020b ""
-  "imvip2018_Formatting_Instructions.bbl" 1525963267 644 13f000b2ce07470433a7dc5fa74f08f1 "bibtex imvip2018_Formatting_Instructions"
-  "imvip2018_Formatting_Instructions.tex" 1525963672 19934 3979979ea4f9f2c3ec53bf5011d5169f ""
-  "uu.jpg" 1524845410 108950 81f61d646800d3f9510ea12a1cd2f035 ""
+  "imvip2018_Formatting_Instructions.aux" 1525994947 942 94162d539cdbdcece1224956d871f9f7 ""
+  "imvip2018_Formatting_Instructions.bbl" 1525994946 49 0eba253fc001332e731e8aba3f23127b "bibtex imvip2018_Formatting_Instructions"
+  "imvip2018_Formatting_Instructions.tex" 1525994944 15304 e4c7e31e8a101a75d1d93a6d5f39916c ""
   (generated)
+  "imvip2018_Formatting_Instructions.pdf"
   "imvip2018_Formatting_Instructions.aux"
   "imvip2018_Formatting_Instructions.log"
-  "imvip2018_Formatting_Instructions.pdf"

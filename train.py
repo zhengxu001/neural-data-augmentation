@@ -57,6 +57,10 @@ def get_data(dataset, style):
             train_dataset = config.CAL101_TRAIN_SCREAM
             validation_dataset = config.CAL101_VAL_SCREAM
             class_number = 102
+        elif style == "scream_wave":
+            train_dataset = config.CAL101_TRAIN_SCREAM_WAVE
+            validation_dataset = config.CAL101_VAL_SCREAM_WAVE
+            class_number = 102
         else:
             train_dataset = config.CAL101_TRAIN
             validation_dataset = config.CAL101_VAL
@@ -69,6 +73,10 @@ def get_data(dataset, style):
         elif style == "scream":
             train_dataset = config.CAL256_TRAIN_SCREAM
             validation_dataset = config.CAL256_VAL_SCREAM
+            class_number = 257
+        elif style == "scream_wave256":
+            train_dataset = config.CAL256_TRAIN_SCREAM_WAVE
+            validation_dataset = config.CAL256_VAL_SCREAM_WAVE
             class_number = 257
         else:
             train_dataset = config.CAL256_TRAIN

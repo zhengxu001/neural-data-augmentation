@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.9)  10 MAY 2018 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.9)  11 MAY 2018 00:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -461,83 +461,67 @@ e
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
-
-<belfast_campus.jpg, id=1, 652.4375pt x 401.5pt>
-File: belfast_campus.jpg Graphic file (type jpg)
- <use belfast_campus.jpg>
-Package pdftex.def Info: belfast_campus.jpg used on input line 60.
-(pdftex.def)             Requested size: 193.47289pt x 135.43607pt.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 52.
 
 [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./belfa
-st_campus.jpg>]
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 74.
- [2]
-LaTeX Font Info:    Try loading font information for T1+futs on input line 110.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 67.
 
+[2]
+LaTeX Font Info:    Try loading font information for T1+futs on input line 102.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 11
-0.
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 10
+2.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 110.
+(Font)              scaled to size 10.07397pt on input line 102.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 110.
+(Font)              scaled to size 7.63599pt on input line 102.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 110.
+(Font)              scaled to size 5.51999pt on input line 102.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 110.
+(Font)              scaled to size 10.07397pt on input line 102.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 110.
+(Font)              scaled to size 7.63599pt on input line 102.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 110.
+(Font)              scaled to size 5.51999pt on input line 102.
+ [3]
+(./imvip2018_Formatting_Instructions.bbl
 
-<uu.jpg, id=13, 255.95625pt x 170.73787pt>
-File: uu.jpg Graphic file (type jpg)
- <use uu.jpg>
-Package pdftex.def Info: uu.jpg used on input line 123.
-(pdftex.def)             Requested size: 338.5863pt x 225.87227pt.
- [3] [4 <./uu.jpg>]
-[5] (./imvip2018_Formatting_Instructions.bbl
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 7.
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [6]
-(./imvip2018_Formatting_Instructions.aux) ) 
+) [4] (./imvip2018_Formatting_Instructions.aux) ) 
 Here is how much of TeX's memory you used:
- 3430 strings out of 492995
- 46826 string characters out of 6132704
- 104772 words of memory out of 5000000
- 6880 multiletter control sequences out of 15000+600000
- 61313 words of font info for 68 fonts, out of 8000000 for 9000
+ 3379 strings out of 492995
+ 46135 string characters out of 6132704
+ 103696 words of memory out of 5000000
+ 6839 multiletter control sequences out of 15000+600000
+ 55122 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,25p,945b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/
-fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/fourier/fourier-bb.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/fourier/fourier-ms.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe
-/utopia/putr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/utopia
-/putri8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on imvip2018_Formatting_Instructions.pdf (6 pages, 233460 bytes)
-.
+ 39i,9n,25p,1258b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf
+-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/fourier/fourier-bb.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/fourier/fourier-ms.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/adobe/utopia/putr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/adobe/
+utopia/putri8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/ut
+mb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on imvip2018_Formatting_Instructions.pdf (4 pages, 67843 bytes).
+
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
