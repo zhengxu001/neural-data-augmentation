@@ -121,7 +121,7 @@ if __name__ == '__main__':
                         default='caltech101',
                         help='caltech101 or caltech256')
     parser.add_argument('--num_epochs', type=int,
-                        default=40,
+                        default=70,
                         help='number of epochs.')
     parser.add_argument('--aug_strategy', type=str,
                         default='NA',
