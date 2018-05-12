@@ -1,20 +1,10 @@
-% ********************************************************************
-% *                  Format for IMVIP 2018 papers,                  *
-% *         based on the IMVIP 2001, 2006, 2014-2017 templates       *
-% ********************************************************************
 \documentclass[a4paper,11pt]{article}
-
-
-
 \setlength{\topmargin}{-0.5cm}
 \setlength{\headsep}{.5cm}
-%\setlength{\footskip}{1.0cm}
 \setlength{\textheight}{24cm}
 \setlength{\textwidth}{17cm}
 \setlength{\evensidemargin}{-.5cm}
 \setlength{\oddsidemargin}{-.5cm}
-
-
 \usepackage{outlines}
 \usepackage{fourier}
 \usepackage{color}
@@ -24,18 +14,11 @@
 \usepackage{amsmath}
 \usepackage{wrapfig}
 \usepackage{xspace}
-
 \usepackage[T1]{fontenc}
 \usepackage{times}
-
-
 \pagestyle{empty}
-
-%%%%
 \begin{document}
-
-\title{Data augmentation with Artistic Style }
-
+\title{Data augmentation with Neural Artistic Style}
 \author{Anonymous Submission}
 \affil{Anonymous Affiliation}
 \date{}
@@ -43,23 +26,21 @@
 \thispagestyle{empty}
 
 
-
 \begin{abstract}
-This paper presents a novel approch to use the image style transfer by CNN as a data augmentation strategy for image-based deep learning algorithms. The success of training deep learning algorithms heavily depends on a large amount of annotated data. Recent neural style transfer approch can apply the style of an image to another image without changing high level semantic content, so we think it is reasonable to use this method as an data augmentation strategy in computer vision tasks. We explore stat-of-art neural style tranfer algorithms build a novel approch to apply it on the current image classification algotithms we compare to and combine with the the traditional approaches to show the effectiveness of this method.Pre-trained Vgg16 and Vgg19 are the baseline network.architecture.
+This paper presents a novel approach to use the neural image style transfer as a data augmentation strategy for other image-based deep learning algorithms. The success of training deep learning algorithms heavily depends on a large amount of annotated data. Recent neural style transfer approch can apply the style of an image to another image without changing its high level semantic content, so we think it is reasonable to use this method as an data augmentation strategy in computer vision tasks. We explore stat-of-art neural style tranfer algorithms and build a novel approch to apply it as a data augmentation strategy on the image classification algotithms. We finally compare to and combine with the the traditional approaches to show the effectiveness of this method.
 \end{abstract}
-\textbf{Keywords:} Neural network, Style Transfer, Data Augmentation, Image Calssification.
+\textbf{Keywords:} Neural Style Transfer, Data Augmentation, Image Calssification.
 
 \section{Introduction}
-Deep Convolutional Neural Networks (CNN) have grown in popularity for performing image processing tasks like image classification, object detection and segementation. In the state-of-art network architechters, many different kinds of data augmentation strategies have been used and found effective to improve the performance.
-At the mean while, The Neural Algorithm of Artistic Style has been found can apply artistic style to a image without chaning the high level content of the original images \cite{Image Style Transfer Using Convolutional Neural Networks}.
+Deep Convolutional Neural Networks (CNN) have grown in popularity for performing image processing tasks, such as image classification, object detection and segementation. In the state-of-art network architechters, many different kinds of data augmentation strategies, like zooming, fliping, and cropping, have been used and found effective to improve the performance \cite{krizhevsky2012imagenet} \cite{simonyan2014very} .
 
-The motivation for this problem is both broad and speciﬁc. Specialized image and video classiﬁcation tasks often have insufﬁcient data. This is particularly true in the medical industry, where access to data is heavily protected due to privacy concerns. Important tasks such as classifying cancer types [14] are hindered by this lack of data. Techniques have been developed which combine expert domain knowledge with pre-trained models. Similarly, small players in the AI industry often lack access to signiﬁcant amounts of data. At the end of the day, we’ve realized a large limiting factor for most projects is access to reliable data, and as such, we explore the effectiveness of distinct data augmentation techniques in image classiﬁcation tasks.
+At the mean while, The Neural Algorithm of Artistic Style has been found can apply artistic style to a image without chaning the high level content of the original images \cite{gatys2016image}. The basic idea of image style transfer is to jointly minimise the distance of the feature representations of a white noise image from the image content representation in one layer and the painting style representation defined on a number of layers of the Convolutional Neural Network.
 
-The datasets we examine are the caltech101 dataset and caltech256. Caltech101 consists of 9000 images and 102 categories, while caltech256 contains 257 categories and ***** images. To evaluate the effectiveness of augmentation techniques, we split both data set as 70\% of images are used for training and 30\% of images are used for validation.
+ For many applications, gathering raw data can be very time-consuming or difficult, especially for image and video classification tasks. Some critical image-based tasks like cancer detection \cite{kyprianidis2013state} are hindered by this lack of data. Similarly, for many start-up company in the AI industry often have difficult to access enough data. Besides, for Machine learning algorithms, if we only use the raw data, the model is easy to get overffiting and does not have enought generalization. So we explore the effectiveness of distinct data augmentation techniques which can help us to address the menthioned problems.
 
-We will apply the pre-trained vgg16 and vgg19 to perform a rudimentary classification. Troditional data augmentation techniques will be firstly used for, and retrain our models. Next, we will make use of CycleGAN [19] to augment our data by transferring styles from images in the dataset to a ﬁxed predetermined image such as Night/Day theme or Winter/Summer. Finally, we explore and propose a different kind of augmentation where we combine neural nets that transfer style and classify so instead of standard augmentation tricks, the neural net learns augmentations that best re-
+The datasets used in this project are the caltech101 dataset\cite{fei2006one} and caltech256 \cite{griffin2007caltech}. in caltech101, pictures of objects belonging to 101 categories. About 40 to 800 images per category. Most categories have about 50 images. The size of each image is roughly 300 x 200 pixels. Caltech256 is a collection of 30607 images in 256 categories which is much bigger than caltech101. To evaluate the effectiveness of augmentation techniques, we split both datasets as 70\% of images are used for training and 30\% of images are used for validation.
 
-1 duce classiﬁcation loss. For all the above, we will measure classiﬁcation performance on the validation dataset as the metric to compare these augmentation strategies.
+We will apply the pre-trained vgg16 and vgg19 to perform a rudimentary classification. Troditional data augmentation techniques will be firstly used for, and retrain our models. Next, we will make use of neural style transfer to augment the data by transferring styles from images in the dataset to a another image. Finally, we explore and propose a different kind of augmentation where we combine style transger and troditional methods together. We will finally evaluate the performance on validation dataset and use classification accuracy as the metric to compare these augmentation strategies.
 
 \section{Related Work}
 We will present the a overview of past work
