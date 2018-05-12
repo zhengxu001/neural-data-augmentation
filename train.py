@@ -31,6 +31,25 @@ def augmentation(aug_strategy):
             vertical_flip=True)
         val_datagen = ImageDataGenerator(
             rescale=1. / 255)
+    elif aug_strategy=="flip2":
+        print("Use Filp2 as Traditional ImageAugmentation\n")
+        train_datagen = ImageDataGenerator(
+            rescale=1./255,
+            featurewise_center=True,
+            featurewise_std_normalization=True,
+            horizontal_flip=True,
+            vertical_flip=True)
+        val_datagen = ImageDataGenerator(
+            rescale=1. / 255)
+    elif aug_strategy=="rotation":
+        print("Use Rotation as Traditional ImageAugmentation\n")
+        train_datagen = ImageDataGenerator(
+            rescale=1./255,
+            featurewise_center=True,
+            featurewise_std_normalization=True,
+            rotation_range=60.)
+        val_datagen = ImageDataGenerator(
+            rescale=1. / 255)
     elif aug_strategy=="flip_rotation":
         print("Use Filp and Rotation as Traditional ImageAugmentation\n")
         train_datagen = ImageDataGenerator(
