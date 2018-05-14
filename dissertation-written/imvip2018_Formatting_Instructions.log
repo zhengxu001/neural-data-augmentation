@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.9)  13 MAY 2018 00:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.9)  14 MAY 2018 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,110 +471,83 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 34.
 
-Overfull \hbox (33.9092pt too wide) in paragraph at lines 41--42
+<overview.png, id=1, 576.1525pt x 238.8925pt>
+File: overview.png Graphic file (type png)
+ <use overview.png>
+Package pdftex.def Info: overview.png used on input line 38.
+(pdftex.def)             Requested size: 266.04436pt x 120.92226pt.
+
+Overfull \hbox (24.19594pt too wide) in paragraph at lines 38--39
+ [] 
+ []
+
+
+Overfull \hbox (33.9092pt too wide) in paragraph at lines 50--51
 []\T1/ptm/m/n/10.95 The datasets used in this project are the cal-tech101 datas
 et[[]] and cal-tech256 [[]].
  []
 
 [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./overv
+iew.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 53.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+ [2]
+Overfull \hbox (19.11064pt too wide) in paragraph at lines 70--72
+\T1/ptm/m/n/10.95 works for dif-fer-ent styles, so it is time con-sum-ing and n
+ot flex-i-ble. Based on the ob-ser-va-tion, [[]]
+ []
 
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 82.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
+) [3]
+LaTeX Font Info:    Try loading font information for T1+futs on input line 95.
 
-LaTeX Warning: Citation `he2016deep' on page 2 undefined on input line 58.
-
-
-LaTeX Warning: Citation `zeiler2014visualizing' on page 2 undefined on input li
-ne 66.
-
-
-LaTeX Warning: Citation `johnson2016perceptual' on page 2 undefined on input li
-ne 72.
-
-[2]
-
-LaTeX Warning: Citation `johnson2016perceptual' on page 3 undefined on input li
-ne 74.
-
-
-LaTeX Warning: Citation `johnson2016perceptual' on page 3 undefined on input li
-ne 81.
-
-
-LaTeX Warning: Citation `dumoulin2016learned' on page 3 undefined on input line
- 81.
-
-[3]
-LaTeX Font Info:    Try loading font information for T1+futs on input line 106.
-
- (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 10
-6.
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 95
+.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 106.
+(Font)              scaled to size 10.07397pt on input line 95.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 106.
+(Font)              scaled to size 7.63599pt on input line 95.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 106.
+(Font)              scaled to size 5.51999pt on input line 95.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 106.
+(Font)              scaled to size 10.07397pt on input line 95.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 106.
+(Font)              scaled to size 7.63599pt on input line 95.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 106.
+(Font)              scaled to size 5.51999pt on input line 95.
 
-<results.png, id=15, 1389.19pt x 639.38875pt>
-File: results.png Graphic file (type png)
- <use results.png>
-Package pdftex.def Info: results.png used on input line 126.
-(pdftex.def)             Requested size: 193.4678pt x 135.43658pt.
-
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 13
-3.
-
-
-Underfull \hbox (badness 2229) in paragraph at lines 134--135
-[]\T1/ptm/m/n/10.95 Data aug-men-ta-tion has been shown to pro-duce
- []
-
-[4 <./results.png>] (./imvip2018_Formatting_Instructions.bbl
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
+(./imvip2018_Formatting_Instructions.bbl
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 11.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [5]
-(./imvip2018_Formatting_Instructions.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [4]) [5]
+(./imvip2018_Formatting_Instructions.aux) ) 
 Here is how much of TeX's memory you used:
- 3521 strings out of 492995
- 48116 string characters out of 6132704
- 105880 words of memory out of 5000000
- 6971 multiletter control sequences out of 15000+600000
+ 3522 strings out of 492995
+ 48141 string characters out of 6132704
+ 105999 words of memory out of 5000000
+ 6972 multiletter control sequences out of 15000+600000
  56675 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,25p,1244b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on imvip2018_Formatting_Instructions.pdf (5 pages, 273456 bytes)
+ 39i,6n,25p,1119b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/
+fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/urw
+/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on imvip2018_Formatting_Instructions.pdf (5 pages, 289653 bytes)
 .
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)

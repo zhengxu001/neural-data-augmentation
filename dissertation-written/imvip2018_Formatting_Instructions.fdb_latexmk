@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex imvip2018_Formatting_Instructions"] 1526166467 "imvip2018_Formatting_Instructions.aux" "imvip2018_Formatting_Instructions.bbl" "imvip2018_Formatting_Instructions" 1526290595
+["bibtex imvip2018_Formatting_Instructions"] 1526303699 "imvip2018_Formatting_Instructions.aux" "imvip2018_Formatting_Instructions.bbl" "imvip2018_Formatting_Instructions" 1526303713
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/apalike.bst" 1480098433 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "imvip2018.bib" 1526166016 2644 9f3008bf0a4ac296e7f933c4253d07d7 ""
-  "imvip2018_Formatting_Instructions.aux" 1526166468 2570 13b8f1c826721e1d2b3946ce227722e3 ""
+  "imvip2018.bib" 1526303565 4135 db368cfae0767b16cee0b393854d6854 ""
+  "imvip2018_Formatting_Instructions.aux" 1526303712 2677 dea61e1d7c415e73ee32cc67f2694e31 ""
   (generated)
   "imvip2018_Formatting_Instructions.bbl"
   "imvip2018_Formatting_Instructions.blg"
-["pdflatex"] 1526166467 "imvip2018_Formatting_Instructions.tex" "imvip2018_Formatting_Instructions.pdf" "imvip2018_Formatting_Instructions" 1526290595
+["pdflatex"] 1526303712 "imvip2018_Formatting_Instructions.tex" "imvip2018_Formatting_Instructions.pdf" "imvip2018_Formatting_Instructions" 1526303713
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1480098688 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -89,11 +89,11 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1512859311 4129592 03edbb9abc72f688f4bc04276b83028c ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "imvip2018_Formatting_Instructions.aux" 1526166468 2570 13b8f1c826721e1d2b3946ce227722e3 ""
-  "imvip2018_Formatting_Instructions.bbl" 1526166467 1747 50d69e6b308ab5f269ef7ca30e475301 "bibtex imvip2018_Formatting_Instructions"
-  "imvip2018_Formatting_Instructions.tex" 1526166463 15216 4a75b02833bdd6094cf625f26fe62e8f ""
-  "results.png" 1526166200 376896 d2f389c5304de04ba647b9f0b90e50fc ""
+  "imvip2018_Formatting_Instructions.aux" 1526303712 2677 dea61e1d7c415e73ee32cc67f2694e31 ""
+  "imvip2018_Formatting_Instructions.bbl" 1526303699 2916 d92e3e116e6c27bd56b272c6cc662c9b "bibtex imvip2018_Formatting_Instructions"
+  "imvip2018_Formatting_Instructions.tex" 1526303711 13819 7e38f27f4600c56c501c61bcdebcd34c ""
+  "overview.png" 1526302882 259816 0ba259284e6cef69921a5bcb78b9bb8c ""
   (generated)
+  "imvip2018_Formatting_Instructions.log"
   "imvip2018_Formatting_Instructions.aux"
   "imvip2018_Formatting_Instructions.pdf"
-  "imvip2018_Formatting_Instructions.log"

@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Dumoulin et~al., 2016]{dumoulin2016learned}
+Dumoulin, V., Shlens, J., and Kudlur, M. (2016).
+\newblock A learned representation for artistic style.
+\newblock {\em arXiv e-prints}, abs/1610.07629.
+
 \bibitem[Engstrom, 2016]{engstrom2016faststyletransfer}
 Engstrom, L. (2016).
 \newblock Fast style transfer.
@@ -22,6 +27,23 @@ Gatys, L.~A., Ecker, A.~S., and Bethge, M. (2016).
 Griffin, G., Holub, A., and Perona, P. (2007).
 \newblock Caltech-256 object category dataset.
 
+\bibitem[He et~al., 2016]{he2016deep}
+He, K., Zhang, X., Ren, S., and Sun, J. (2016).
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 770--778.
+
+\bibitem[Huang and Belongie, 2017]{huang2017arbitrary}
+Huang, X. and Belongie, S. (2017).
+\newblock Arbitrary style transfer in real-time with adaptive instance
+  normalization.
+\newblock {\em CoRR, abs/1703.06868}.
+
+\bibitem[Johnson et~al., 2016]{johnson2016perceptual}
+Johnson, J., Alahi, A., and Fei-Fei, L. (2016).
+\newblock Perceptual losses for real-time style transfer and super-resolution.
+\newblock In {\em European Conference on Computer Vision}.
+
 \bibitem[Krizhevsky et~al., 2012]{krizhevsky2012imagenet}
 Krizhevsky, A., Sutskever, I., and Hinton, G.~E. (2012).
 \newblock Imagenet classification with deep convolutional neural networks.
@@ -39,5 +61,11 @@ Kyprianidis, J.~E., Collomosse, J., Wang, T., and Isenberg, T. (2013).
 Simonyan, K. and Zisserman, A. (2014).
 \newblock Very deep convolutional networks for large-scale image recognition.
 \newblock {\em arXiv preprint arXiv:1409.1556}.
+
+\bibitem[Zeiler and Fergus, 2014]{zeiler2014visualizing}
+Zeiler, M.~D. and Fergus, R. (2014).
+\newblock Visualizing and understanding convolutional networks.
+\newblock In {\em European conference on computer vision}, pages 818--833.
+  Springer.
 
 \end{thebibliography}
