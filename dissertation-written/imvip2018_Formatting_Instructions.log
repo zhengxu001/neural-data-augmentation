@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.9)  11 MAY 2018 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.9)  13 MAY 2018 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -354,50 +354,50 @@ Package: times 2005/04/12 PSNFSS-v9.2a (SPQR)
 (./imvip2018_Formatting_Instructions.aux)
 \openout1 = `imvip2018_Formatting_Instructions.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 35.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 20.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 20.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 35.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 35.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 20.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 20.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 35.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 35.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 20.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 20.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 20.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 35.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 20.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -465,110 +465,120 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 34.
 
-
-LaTeX Warning: Citation `Image Style Transfer Using Convolutional Neural Networ
-ks' on page 1 undefined on input line 54.
+Overfull \hbox (33.9092pt too wide) in paragraph at lines 41--42
+[]\T1/ptm/m/n/10.95 The datasets used in this project are the cal-tech101 datas
+et[[]] and cal-tech256 [[]].
+ []
 
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 66.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 53.
 
-
-LaTeX Warning: Citation `krizhevsky2012imagenet' on page 2 undefined on input l
-ine 68.
-
-
-LaTeX Warning: Citation `simonyan2014very' on page 2 undefined on input line 70
-.
-
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 72.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
-LaTeX Warning: Citation `he2016deep' on page 2 undefined on input line 77.
+LaTeX Warning: Citation `he2016deep' on page 2 undefined on input line 58.
 
 
 LaTeX Warning: Citation `zeiler2014visualizing' on page 2 undefined on input li
-ne 85.
+ne 66.
 
 
 LaTeX Warning: Citation `johnson2016perceptual' on page 2 undefined on input li
-ne 91.
+ne 72.
 
 [2]
 
 LaTeX Warning: Citation `johnson2016perceptual' on page 3 undefined on input li
-ne 93.
+ne 74.
 
 
 LaTeX Warning: Citation `johnson2016perceptual' on page 3 undefined on input li
-ne 100.
+ne 81.
 
 
 LaTeX Warning: Citation `dumoulin2016learned' on page 3 undefined on input line
- 100.
+ 81.
 
 [3]
-LaTeX Font Info:    Try loading font information for T1+futs on input line 134.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 106.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 13
-4.
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 10
+6.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 134.
+(Font)              scaled to size 10.07397pt on input line 106.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 134.
+(Font)              scaled to size 7.63599pt on input line 106.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
+(Font)              scaled to size 5.51999pt on input line 106.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 134.
+(Font)              scaled to size 10.07397pt on input line 106.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 134.
+(Font)              scaled to size 7.63599pt on input line 106.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
- [4]
-(./imvip2018_Formatting_Instructions.bbl) [5]
+(Font)              scaled to size 5.51999pt on input line 106.
+
+<results.png, id=15, 1389.19pt x 639.38875pt>
+File: results.png Graphic file (type png)
+ <use results.png>
+Package pdftex.def Info: results.png used on input line 126.
+(pdftex.def)             Requested size: 193.4678pt x 135.43658pt.
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 13
+3.
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 134--135
+[]\T1/ptm/m/n/10.95 Data aug-men-ta-tion has been shown to pro-duce
+ []
+
+[4 <./results.png>] (./imvip2018_Formatting_Instructions.bbl
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)) [5]
 (./imvip2018_Formatting_Instructions.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3492 strings out of 492995
- 47677 string characters out of 6132704
- 105747 words of memory out of 5000000
- 6940 multiletter control sequences out of 15000+600000
- 58284 words of font info for 65 fonts, out of 8000000 for 9000
+ 3521 strings out of 492995
+ 48116 string characters out of 6132704
+ 105880 words of memory out of 5000000
+ 6971 multiletter control sequences out of 15000+600000
+ 56675 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,25p,1244b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,6n,25p,1244b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on imvip2018_Formatting_Instructions.pdf (5 pages, 77647 bytes).
-
+exlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on imvip2018_Formatting_Instructions.pdf (5 pages, 273456 bytes)
+.
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

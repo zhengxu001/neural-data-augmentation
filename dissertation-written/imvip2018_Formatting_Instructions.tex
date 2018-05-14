@@ -40,13 +40,13 @@ At the mean while, The Neural Algorithm of Artistic Style has been found can app
 
 The datasets used in this project are the caltech101 dataset\cite{fei2006one} and caltech256 \cite{griffin2007caltech}. in caltech101, pictures of objects belonging to 101 categories. About 40 to 800 images per category. Most categories have about 50 images. The size of each image is roughly 300 x 200 pixels. Caltech256 is a collection of 30607 images in 256 categories which is much bigger than caltech101. To evaluate the effectiveness of augmentation techniques, we split both datasets as 70\% of images are used for training and 30\% of images are used for validation.
 
-We will apply the pre-trained vgg16 and vgg19 to perform a rudimentary classification. Troditional data augmentation techniques will be firstly used for, and retrain our models. Next, we will make use of neural style transfer to augment the data by transferring styles from images in the dataset to a another image. Finally, we explore and propose a different kind of augmentation where we combine style transger and troditional methods together. We will finally evaluate the performance on validation dataset and use classification accuracy as the metric to compare these augmentation strategies.
+We will apply the pre-trained vgg16 model and vgg19 model to perform a rudimentary classification. Troditional data augmentation techniques will be firstly used, and retrain our models. Next, we will make use of neural style transfer to augment the data by transferring styles from images in the dataset to a another image. Finally, we explore and propose a different kind of augmentation where we combine style transger and troditional methods together. We will finally evaluate the performance on validation dataset and use classification accuracy as the metric to compare these augmentation strategies.
 
 \section{Related Work}
-We will present the a overview of past work
+We will present the a overview of past work.(In progress, need to do more literature review)
 \subsection{Troditional Data Augmentation Tecniques}
 \subsubsection{AlexNet}
-AlexNet from \cite{krizhevsky2012imagenet} is the winner of ILSVRC 2012 and the first model to make CNN popular in Computer Vision field. In this work, a 8 layers CNN model are introduced. \textbf{Data augmentation techniques such as image translations, horizontal reflections, and patch extractions were used to avoid overfitting.} ReLU and dropout are also used in this paper.
+AlexNet from \cite{krizhevsky2012imagenet} is the winner of ILSVRC 2012 and the first model to make CNN popular in Computer Vision field. In this work, a 8 layers CNN model are introduced. Data augmentation techniques such as image translations, horizontal reflections, and patch extractions were used to avoid overfitting. ReLU and dropout are also used in this paper to avoid overfitting.
 \subsubsection{VGGNet}
 VGGNet is a simple but deep model created by \cite{simonyan2014very}. This model strictly used 3x3 filters with stride and pad of 1, along with 2x2 maxpooling layers with stride 2.
 \begin{outline}
@@ -82,56 +82,53 @@ Although the work by \cite{johnson2016perceptual} are much faster than descripti
 By using their method and tuning parameters of an conditional instance normalization, we "can stylize a single image into N painting styles with a single feed forward pass of the network with a batch size of N." 
 
 \section{Method}
-Method. How to keep high level content. how to apply styles. the formulars.
-\subsection{Datasets and Features} 
+We propose two different approaches to data augmentation. The first approach is Traditional transformations. Traditional transformations consist of using a combination of affine transformations to manipulate the training data. For each input image, we generate a ”duplicate” image that is shifted, zoomed in/out, rotated, flipped, distorted, or shaded with a hue. Both image and duplicate are fed into the neural net. The second approach Neural Style Transfer. For each input image, we select a style image from a subset of different styles from famous artists: wave, scream, rain-princess. A styled transformation of the original image is generated. Both original and styled image are fed to train the net.
+
+<A image of the Traditional transformations should be put here>
+
+
+\subsection{Datasets and Features}
+There are lots of image dataset. Since we need to do some analysis in the future, the image quality should be good. Here are some popular dataset avaliable online.
+\begin{outline}
+\1 Caltech 256: http://www.vision.caltech.edu/Image\_Datasets/Caltech256/ (1.2 GB. image size/quality is fine)
+\1 Caltech 101: http://www.vision.caltech.edu/Image\_Datasets/Caltech101/ (131MB, image quality)
+\1 CIFAR10 / CIFAR100: image size is too small (32*32)
+\1 ImageNet(more than 100GB. select specific classes: how to select would be a problem)
+\1 Tiny ImageNet(image Size is too small 64*64)
+\1 Pascal VOC2007 and VOC2012: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html(around 2 GB)
+\1 Coil-100/Coil-20: images are too small.
+\end{outline}
+Conclusion: The first dataset can be Caltech101, which is a small but effective dataset. This dataset has been tested in the original VggNet Paper. I can take it as my first dataset and do some experiment. I can also do some testing in Caltech256 and VOC2007/2012 after I get some results from Caltech101.
+
 \subsection{Baseline Network}
-We propose two different approaches to data augmentation. The ﬁrst approach is generate augmented data before training the classiﬁer. For instance, we will apply GANs and basic transformations to create a larger dataset. All images are fed into the net at training time and at test time, only the original images are used to validate. 
+The first model I use will be vgg16. Then I can also try vgg19. The output would look like:
+\begin{center}
+    \begin{tabular}{| l | l | l |}
+    \hline
+    \textbf{Model} & \textbf{Dataset} & \textbf{result} \\ \hline
+    Vgg16 & Caltech101 & ... \\ \hline
+    Vgg19 & Caltech101 & ... \\ \hline
+    Vgg16 & Caltech256 & ... \\ \hline
+    Vgg19 & Caltech256 & ... \\ \hline
+    \end{tabular}
+\end{center}
 
-3.1. Traditional Transformations
-Traditional transformations consist of using a combination of afﬁne transformations to manipulate the training data [9]. For each input image, we generate a ”duplicate” image that is shifted, zoomed in/out, rotated, ﬂipped, distorted, or shaded with a hue. Both image and duplicate are fed into the neural net. For a dataset of size N, we generate a dataset of 2N size.
+\subsection{Neural Style Transfer with Traditional Transformations}
+The implementation follows \cite{engstrom2016faststyletransfer}, which uses roughly the same transformation network as described in Johnson, except that batch normalization is replaced with Ulyanov's instance normalization, and the scaling/offset of the output tanh layer is slightly different. We use a loss function close to the one described in Gatys, using VGG19 instead of VGG16 and typically using "shallower" layers than in Johnson's implementation. Empirically, this results in larger scale style features in transformations. 
 
-3.2. Neural Style Transfer
-For each input image, we select a style image from a subset of 6 different styles: Cezanne, Enhance, Monet, Ukiyoe, Van Gogh and Winter. A styled transformation of the original image is generated. Both original and styled image are fed to train the net. More detail about the GANs and style transfer can be viewed on the cited paper [19].
-
-Figure II: Neural Style Transfer via CNN
-
-More details about the architecture of the layers will be described in the Experiments section. We implement a small 5-layer CNN to perform augmentation. The classiﬁer is a small 3-layer net with batch normalization and pooling followed by 2 fully connected layers with dropout. This is much similar to VGG16 in structure but smaller in interest of faster training for evaluation. We aren’t aiming for the best classiﬁer. We are exploring how augmentation tricks improve classiﬁcation accuracy, reduce overﬁtting, and help the networks converge faster.
-
-3.3 Neural Style Transfer with Traditional Transformations
-More details about the architecture of the layers will be described in the Experiments section. We implement a small 5-layer CNN to perform augmentation. The classiﬁer is a small 3-layer net with batch normalization and pooling followed by 2 fully connected layers with dropout. This is much similar to VGG16 in structure but smaller in interest of faster training for evaluation. We aren’t aiming for the best classiﬁer. We are exploring how augmentation tricks improve classiﬁcation accuracy, reduce overﬁtting, and help the networks converge faster.
-
+<A picture of the network archtecture  should be put here>
 
 \section{Experiments and Results}
-There are three sets of images that we experimented with. Each dataset is a small dataset with two classes. A small portion of the data is held aside for testing. The remaining images are divided by a 80:20 split between training and validation.
-
-Our ﬁrst data set is taken from tiny-imagenet-200. We take 500 images from dogs and 500 images from cats. 400 images for each class is allocated to the training set. The remaining 100 in each class forms the validation set. The images are 64x64x3. RGB values are also normalized for each color in the preprocessing step.
-
-The second data set is also taken from tiny-imagenet200 except we replace cats with goldﬁsh. The reason for this change is that goldﬁsh look very different from dogs whereas cats visually are very similar. Hence CNNs tend to have a harder time distinguishing cats. Finally, cats and dogs have similar styles whereas images from the goldﬁsh tend to have very bright orange styles.
-
-Lastly, the ﬁnal dataset is 2k images from MNIST, 1000 from each class. We perform the task of distinguishing 0’s from 8’s. MNIST images are 28x28x1 and are in gray scale. Again, images are normalized in the preprocessing step. MNIST is much more structured than imagenet so that digits are always centered. The motivation is that MNIST provides a very simple dataset with simple images. Are patterns in the more complex images also observed in simpler images?
-
-
-To test the effectiveness of various augmentation, we run 10 experiments on the imagenet data. The results of the experiments are tabulated in the following table. All experiments are run for 40 epochs at the learning rate of 0.0001 using Adam Optimization. The highest test accuracy at all the epochs is reported as the best score. Once we obtained the augmented images, we feed them into a neural net that does classiﬁcation. We name this neural net the SmallNet since it only has 3 convolutional layers paired with a batch normalization and max pool layer followed by 2 fully connected layers. The output is a score matrix for the weights for each class. The layers of the network is detailed below although the speciﬁc net is not very important. Any net that can reliably predict the classes sufﬁces. Hence, one can replace this net with VGG16 with ﬁne-tuning on the fully connected and last convolution layers to allow for sufﬁcient training.
-Consider the variable $x \in \mathbb{R}$, 
-\begin{equation}
-f(x)=x^2+2 \label{eq:mylabel}
-\end{equation}
-Equation (\ref{eq:mylabel}) is a polynomial of order 2.
-%% comment line
-
-An example of table is shown Table \ref{tab:mytab}.
-\begin{table}[!ht]
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-x & y & z\\
-\hline
-\end{tabular}
+\section{Introduction}
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth, height=0.28\textwidth]{results.png}
 \end{center}
 \vspace{-20pt}
-\caption{Example of table.} \label{tab:mytab}
-  \vspace{-10pt}
-\end{table}
+  \caption{Results.}
+  \vspace{-0pt}
+\end{wrapfigure}
 
 \section{Conclusion}
 Data augmentation has been shown to produce promising ways to increase the accuracy of classiﬁcation tasks. While traditional augmentation is very effective alone, other techniques enabled by CycleGAN and other similar networks are promising. We experimented with our own way of combining training images allowing a neural net to learn augmentations that best improve the ability to correctly classify images. If given more time, we would like to explore more complex architecture and more varied datasets. To mimic industrial applications, using a VGG16 instead of SmallNet can help us determine if augmentation techniques are still helpful given complex

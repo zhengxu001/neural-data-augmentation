@@ -1,17 +1,43 @@
 \begin{thebibliography}{}
 
+\bibitem[Engstrom, 2016]{engstrom2016faststyletransfer}
+Engstrom, L. (2016).
+\newblock Fast style transfer.
+\newblock \url{https://github.com/lengstrom/fast-style-transfer/}.
+\newblock commit xxxxxxx.
+
+\bibitem[Fei-Fei et~al., 2006]{fei2006one}
+Fei-Fei, L., Fergus, R., and Perona, P. (2006).
+\newblock One-shot learning of object categories.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  28(4):594--611.
+
 \bibitem[Gatys et~al., 2016]{gatys2016image}
 Gatys, L.~A., Ecker, A.~S., and Bethge, M. (2016).
 \newblock Image style transfer using convolutional neural networks.
 \newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2016 IEEE
   Conference on}, pages 2414--2423. IEEE.
 
-\end{thebibliography}
+\bibitem[Griffin et~al., 2007]{griffin2007caltech}
+Griffin, G., Holub, A., and Perona, P. (2007).
+\newblock Caltech-256 object category dataset.
 
-@inproceedings{krizhevsky2012imagenet,
-  title={Imagenet classification with deep convolutional neural networks},
-  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
-  booktitle={Advances in neural information processing systems},
-  pages={1097--1105},
-  year={2012}
-}
+\bibitem[Krizhevsky et~al., 2012]{krizhevsky2012imagenet}
+Krizhevsky, A., Sutskever, I., and Hinton, G.~E. (2012).
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105.
+
+\bibitem[Kyprianidis et~al., 2013]{kyprianidis2013state}
+Kyprianidis, J.~E., Collomosse, J., Wang, T., and Isenberg, T. (2013).
+\newblock State of the" art”: A taxonomy of artistic stylization techniques
+  for images and video.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  19(5):866--885.
+
+\bibitem[Simonyan and Zisserman, 2014]{simonyan2014very}
+Simonyan, K. and Zisserman, A. (2014).
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em arXiv preprint arXiv:1409.1556}.
+
+\end{thebibliography}
