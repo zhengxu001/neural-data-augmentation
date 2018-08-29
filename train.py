@@ -45,7 +45,7 @@ def augmentation(aug_strategy):
         print("Use Rotation as Traditional ImageAugmentation\n")
         train_datagen = ImageDataGenerator(
             rescale=1./255,
-            featurewise_center=True,
+            featurewise_Fcenter=True,
             featurewise_std_normalization=True,
             rotation_range=60.)
         val_datagen = ImageDataGenerator(
@@ -77,6 +77,15 @@ def get_data(dataset, style):
             print("Use Dataset caltech101 and scream style\n")
             train_dataset = config.CAL101_TRAIN_SCREAM
             validation_dataset = config.CAL101_VAL_SCREAM
+            class_number = 102
+        elif style == "udnie":
+            print("Use Dataset caltech101 and udnie style\n")
+            train_dataset = config.CAL101_TRAIN_UDNIE
+            validation_dataset = config.CAL101_VAL_UDNIE
+        elif style == "la_muse":
+            print("Use Dataset caltech101 and la_muse style\n")
+            train_dataset = config.CAL101_TRAIN_LA_MUSE
+            validation_dataset = config.CAL101_VAL_LA_MUSE    
             class_number = 102
         elif style == "scream_wave":
             print("Use Dataset caltech101 and scream_wave style\n")

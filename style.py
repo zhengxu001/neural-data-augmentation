@@ -5,8 +5,10 @@ from optimize import optimize
 from argparse import ArgumentParser
 from utils import get_img, exists, list_files
 
-CONTENT_WEIGHT = 7.5e0
-STYLE_WEIGHT = 1e2
+# CONTENT_WEIGHT = 7.5e0
+CONTENT_WEIGHT = 9e0
+STYLE_WEIGHT = 0.8e2
+# STYLE_WEIGHT = 1e2
 TV_WEIGHT = 2e2
 
 LEARNING_RATE = 1e-3

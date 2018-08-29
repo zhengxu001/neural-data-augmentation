@@ -15,6 +15,12 @@ CAL101_VAL_WAVE = os.path.join(DATASET, "wave/val")
 CAL101_TRAIN_SCREAM = os.path.join(DATASET, "scream/train")
 CAL101_VAL_SCREAM = os.path.join(DATASET, "scream/val")
 
+CAL101_TRAIN_UDNIE = os.path.join(DATASET, "udnie/train")
+CAL101_VAL_UDNIE = os.path.join(DATASET, "udnie/val")
+
+CAL101_TRAIN_LA_MUSE = os.path.join(DATASET, "la_muse/train")
+CAL101_VAL_LA_MUSE = os.path.join(DATASET, "la_muse/val")
+
 CAL101_TRAIN_SCREAM_WAVE = os.path.join(DATASET, "scream_wave/train")
 CAL101_VAL_SCREAM_WAVE = os.path.join(DATASET, "scream_wave/val")
 
