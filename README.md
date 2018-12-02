@@ -40,7 +40,25 @@ Use `train.py` to evaluate effect of augmentated images. Run `python train.py` w
       --model vgg19 \
       --style wave
 
-### ToDo
-- [ ] Traing Model according to sheet: https://docs.google.com/spreadsheets/d/1VBMZK1qmADiwD1fo33wxBVg79YbS2TsP_jjoOHAPLBE/edit?usp=sharing
-- [ ] Wring Stuffs
+### Styles Outlook
+##### First row:
++ The Muse, Pablo Picasso, 1935
++ Rain Princess, a painting by Leonid Afremov
++ The Scream, Edvard Munch, 1893 - 1910
++ A snow picture from the Internet
 
+##### Second row:
++ A typical udine painting
++ Sunflower from one of Van Gogh's series of paintings
++ The Great Wave off Kanagawa, Hokusai, 1829 - 1832
++ A screenshot from the Japaness Animation: Your Name (2016)
+<figure>
+  <img align="center" src="assets/appendix/LAMuse.png"  width="177"/>
+  <img align="center" src="assets/appendix/RainPrincess.png"  width="177"/>
+  <img align="center" src="assets/appendix/Scream.png" width="177"/>
+  <img align="center" src="assets/appendix/Snow.png" width="177"/>
+  <img align="center" src="assets/appendix/Udnie.png" width="177"/>
+  <img align="center" src="assets/appendix/Sunflower.png" width="177"/>
+  <img align="center" src="assets/appendix/Wave.png" width="177"/>
+  <img align="center" src="assets/appendix/YourName.png" width="177"/>
+</figure>
